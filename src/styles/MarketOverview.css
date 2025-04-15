@@ -1,0 +1,262 @@
+.market-overview {
+  padding: 1rem;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  margin-top: 64px;
+  box-sizing: border-box;
+}
+
+.market-ticker-strip {
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 1rem;
+  background: rgba(30, 30, 30, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: -1rem -1rem 1rem -1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ticker-symbol {
+  font-weight: 600;
+  color: #888;
+}
+
+.ticker-price {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.main-indices {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.index-card {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.index-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.index-header h2 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.index-time {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.index-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.change-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.change {
+  font-weight: 500;
+}
+
+.change.positive {
+  color: #00f962;
+}
+
+.change.negative {
+  color: #ff5a55;
+}
+
+.chart-preview {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.market-movers-section {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.market-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #888;
+}
+
+.status-indicator.active {
+  background-color: #00f962;
+}
+
+.movers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.movers-card {
+  background: rgba(20, 20, 20, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.card-header h3 {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.movers-list {
+  padding: 1rem;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  padding: 0.5rem;
+  color: #888;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.mover-item {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  padding: 0.75rem 0.5rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.mover-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mover-item:last-child {
+  border-bottom: none;
+}
+
+.mover-item .symbol {
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.mover-item .price {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.mover-item .volume {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-indices {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .market-overview {
+    padding: 0.5rem;
+  }
+
+  .movers-container {
+    grid-template-columns: 1fr;
+  }
+
+  .list-header, .mover-item {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .change {
+    font-size: 0.9rem;
+  }
+} 
